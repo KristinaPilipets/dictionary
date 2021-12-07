@@ -1,3 +1,4 @@
+from modul import*
 Capitals={}
 c="1"
 with open("Cap.txt") as f:
@@ -7,8 +8,7 @@ with open("Cap.txt") as f:
 print(Capitals.items())
 
 while True:
-	
+	c=input("Otsing sõna sõnavaras - 1, ")
 	if c=="1":
-		a=input("Siseta riigi nimi või pealinn >>> ")
-		ans=Capitals.get(a.title)
-		print(ans)
+		find_word()
+	elif c=="2"
