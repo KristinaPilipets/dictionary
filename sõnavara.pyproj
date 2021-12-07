@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d25e3516-47b8-4e6e-931d-537b203c6681</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>sõnavara.py</StartupFile>
+    <StartupFile>dictionary.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,7 +21,13 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="sõnavara.py" />
+    <Compile Include="dictionary.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="example.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cap.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

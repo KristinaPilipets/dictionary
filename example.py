@@ -1,5 +1,5 @@
-Capitals={}
-Capitals = dict()
+
+Capitals = dict() #2
 Capitals['Russia'] = 'Moscow'
 Capitals['Ukraine'] = 'Kiev'
 Capitals['USA'] = 'Washington'
@@ -11,6 +11,7 @@ for country in Countries:
 		print('В базе нет страны c названием ' + country)
 
 dictionary = {'персона': 'человек','марафон': 'гонка бегунов длиной около 26 миль','противостоять': 'оставаться сильным, несмотря на давление','бежать': 'двигаться со скоростью'}
-
-gender_dict = {0: 'муж', 1: 'жен'}
+print(dictionary['марафон'])
+for key, value in dictionary.items():
+	print(key, value)
 
