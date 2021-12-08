@@ -6,8 +6,7 @@ with open("Cap.txt") as f:
 		Capitals[k.strip()]=v.strip()
 
 while True:
-	
-	c=input("Otsing sõna sõnavaras - 1, muutma sõna või sõna tähendus - 2, test - 3")
+	c=input("Otsing sõna sõnavaras - 1, muutma sõna tähendus - 2, test - 3")
 	if c=="1":
 		ans,a=find_word(Capitals)
 		print(ans)
@@ -22,5 +21,8 @@ while True:
 	elif c=="2":
 		Capitals=change_smth(Capitals)
 	elif c=="3":
-		testingknoledge(Capitals)
+		result=testingknoledge(Capitals)
+		print("Sinu resultat on "+str(result)+"%")
+	else:
+		print("See funktioon ei olema")
 		
