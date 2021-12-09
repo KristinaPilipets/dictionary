@@ -26,9 +26,12 @@ def change_smth(Capitals:dict)->dict:
 	"""Muutma midagi sõnavaras
 	"""
 	a=input("Siseta sõna, milline tähendus te tahate muuta >>> ")
-	c=input("Siseta uus tähendus >>> ")
-	Capitals.update({a.title():c.title()}) #обновляем значение слова по ключу
-	return Capitals #возращаем измененый словарь
+	if a not in Capitals.keys():
+		print("see sõna ei ole sõnavaras")
+	else:
+		c=input("Siseta uus tähendus >>> ")
+		Capitals.update({a.title():c.title()}) #обновляем значение слова по ключу
+		return Capitals #возращаем измененый словарь
 
 def testingknoledge(Capitals:dict)->float:
 	"""Küsida mis ta tahab testida ja küsida 10 küsimust

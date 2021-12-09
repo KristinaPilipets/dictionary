@@ -1,10 +1,10 @@
 from modul import*
 Capitals={}
-with open("Cap.txt") as f:
+with open("Cap.txt","r") as f:
 	for i in f: # создаем цикл по кол-ву строк
 		k,v=i.strip().split("-") #отделяем слова на строчке в строчке по знаку "-"
 		Capitals[k.strip()]=v.strip() # добавляем в словарь
-
+print(Capitals)
 while True:
 	c=input("Otsing sõna sõnavaras - 1, muutma sõna tähendus - 2, test - 3, välja - 4")
 	if c=="1":
@@ -24,6 +24,10 @@ while True:
 		result=testingknoledge(Capitals)
 		print("Sinu resultat on "+str(result)+"%") # на экране показываем ответ
 	elif c=="4": # заканчиваем цикл 
+		# перезаписать словарь в файл
+		with open("Cap.txt", "w") as f:
+			for key, value in Capitals.items(): # создаем цикл по кол-ву ключей
+				f.write(key+"-"+value+"\n") # перезаписать словарь в файл
 		break
 	else:
 		print("See funktioon ei olema")
