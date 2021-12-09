@@ -31,7 +31,7 @@ def change_smth(Capitals:dict)->dict:
 	else:
 		c=input("Siseta uus tähendus >>> ")
 		Capitals.update({a.title():c.title()}) #обновляем значение слова по ключу
-		return Capitals #возращаем измененый словарь
+	return Capitals #возращаем измененый словарь
 
 def testingknoledge(Capitals:dict)->float:
 	"""Küsida mis ta tahab testida ja küsida 10 küsimust
