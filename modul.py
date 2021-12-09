@@ -6,10 +6,10 @@ def find_word(Capitals:dict)->str:
 	a=input("Siseta riigi nimi või pealinn inglise keeles >>> ")
 	for key, value in Capitals.items(): #проверяем каждое значение вместе со словами 
 		if a.title()==value:
-			ans=(a+"/"+key)
+			ans=(a+" / "+key)
 			break
 		elif a.title()==key:
-			ans=(a+"/"+value)
+			ans=(a+" / "+value)
 			break
 		else:
 			ans="See sõna ei olema"
@@ -19,7 +19,7 @@ def add_word(Capitals:dict, a:str)->dict:
 	"""Lisama sõna sõnavaras
 	"""
 	b=input("Siseta sõna tähendus >>> ")
-	Capitals.update({a:b})
+	Capitals.update({a:b.title()})
 	return Capitals
 
 def change_smth(Capitals:dict)->dict:
@@ -72,7 +72,7 @@ def testingknoledge(Capitals:dict)->float:
 		a=0
 		for i in range (1,16):
 			word=choice(country)
-			for key, value in Capitals.items(): #проверяем каждое значение вместе со словами 
+			for key, value in Capitals.items(): #проверяем каждое значение вместе с ключами
 				if word==value:
 					realans=key
 					ans=input(str(i)+"Siseta riig kus pealinn on "+word+" >>> ")
