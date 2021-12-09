@@ -23,7 +23,7 @@ def add_word(Capitals:dict, a:str)->dict:
 	return Capitals
 
 def change_smth(Capitals:dict)->dict:
-	"""Muutma midagi sõnavaras
+	"""Muutma sõna tähendus sõnavaras
 	"""
 	a=input("Siseta sõna, milline tähendus te tahate muuta >>> ")
 	if a not in Capitals.keys():
@@ -93,8 +93,10 @@ def testingknoledge(Capitals:dict)->float:
 	else:
 		print("Vale funktsioon") #если была выбрана не одна из 3 функций то выдаем ошибку 
 	return result
-	
+
 def findkey(val:str,Capitals:dict)->str:
+	"""otsing "key" sõnavars
+	"""
 	for key, value in Capitals.items(): # создаем цикл в котором проверяем значения
 		if val == value: # если значение совподает с переменной
 			return key # возращаем ключ
