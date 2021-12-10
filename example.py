@@ -8,6 +8,10 @@ myobj.save("welcome.mp3")
 os.system("mpg321 welcome.mp3")
 #### tts
 
+###
+
+###
+
 Capitals = dict() #2
 Capitals['Russia'] = 'Moscow'
 Capitals['Ukraine'] = 'Kiev'
