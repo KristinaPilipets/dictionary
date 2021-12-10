@@ -2,7 +2,7 @@ from modul import*
 Capitals={}
 with open("Cap.txt","r") as f:
 	for i in f: # создаем цикл по кол-ву строк
-		k,v=i.strip().split("-") #отделяем слова на строчке в строчке по знаку "-"
+		k,v=i.strip().split("-") # отделяем слова на строчке в строчке по знаку "-"
 		Capitals[k.strip()]=v.strip() # добавляем в словарь
 print(Capitals)
 while True:
@@ -23,8 +23,7 @@ while True:
 	elif c=="3":
 		result=testingknoledge(Capitals)
 		print("Sinu resultat on "+str(result)+"%") # на экране показываем ответ
-	elif c=="4": # заканчиваем цикл 
-		# перезаписать словарь в файл
+	elif c=="4": # заканчиваем цикл
 		with open("Cap.txt", "w") as f:
 			for key, value in Capitals.items(): # создаем цикл по кол-ву ключей
 				f.write(key+"-"+value+"\n") # перезаписать словарь в файл
