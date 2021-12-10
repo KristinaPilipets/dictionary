@@ -2,10 +2,10 @@
 from gtts import gTTS
 import os
 mytext="Pealinn ja riig"
-language=en
+language="et"
 myobj=gTTS(text=mytext, lang=language, slow=False)
-myobj.save("welcome.mp3")
-os.system("mpg321 welcome.mp3")
+myobj.save("mpg 321 welcome.mp3")
+os.system("welcome.mp3")
 #### tts
 
 ###

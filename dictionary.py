@@ -1,10 +1,18 @@
-from modul import*
+from modul import* 
+
+### text to speach
+#from gtts import gTTS
+#import os
+#s=gTTS(text="Tallinn", lang="et", slow=True).save("heli.mp3")
+#os.system("heli.mp3")
+###
+
 Capitals={}
 with open("Cap.txt","r") as f:
 	for i in f: # создаем цикл по кол-ву строк
 		k,v=i.strip().split("-") # отделяем слова на строчке в строчке по знаку "-"
 		Capitals[k.strip()]=v.strip() # добавляем в словарь
-print(Capitals)
+
 while True:
 	c=input("Otsing sõna sõnavaras - 1, muutma sõna tähendus - 2, test - 3, välja - 4")
 	if c=="1":
